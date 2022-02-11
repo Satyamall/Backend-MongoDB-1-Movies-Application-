@@ -48,7 +48,8 @@ movies
 ]
 
 **Below Picture for above querry**
--224
+![Screenshot (224)](https://user-images.githubusercontent.com/80479635/153556090-087427a8-fef2-4ee6-adc2-193489f3183e.png)
+
 
 
 # 2. find all movies which are not equal to movie_name.
@@ -82,7 +83,8 @@ movies
   .....
   .....
 **Below Picture for above querry**
--225
+![Screenshot (225)](https://user-images.githubusercontent.com/80479635/153556120-fa5d578a-c41d-4fd4-aeba-608d4b73f566.png)
+
 
 # 3. find all movies greater than and greater than equal to a budget
 
@@ -115,7 +117,8 @@ movies
   .....
   .....
 **Below Picture for above querry**
--226
+![Screenshot (226)](https://user-images.githubusercontent.com/80479635/153556149-cbe547c4-ec1b-4056-84a7-fa1d02fb0fde.png)
+
 
 
 # 4. find all movies less than and less than equal to a budget.
@@ -149,7 +152,8 @@ movies
   .....
   .....
 **Below Picture for above querry**
--227
+![Screenshot (227)](https://user-images.githubusercontent.com/80479635/153556175-c0816187-b7fa-49cf-b08d-8a3a91f6c0a4.png)
+
 
 
 # 5. find all movies that are produced after 2000 with budget greater than 10000.
@@ -191,7 +195,8 @@ movies
   .....
   .....
 **Below Picture for above querry**
--228
+![Screenshot (228)](https://user-images.githubusercontent.com/80479635/153556203-07b9f242-4179-462e-8dd4-d87b32625140.png)
+
 
 
 # 6. find all movies that are produced after 2000 or budget greater than 10000.
@@ -226,7 +231,7 @@ movies
   .....
   .....
 **Below Picture for above querry**
--229
+![Screenshot (229)](https://user-images.githubusercontent.com/80479635/153556229-9c77b294-c241-45e2-9a9e-d03fdbbc2607.png)
 
 
 # 7. find all movies that are neither produced after 2000 nor with budget greater than 10000.
@@ -269,7 +274,8 @@ movies
   .....
   .....
 **Below Picture for above querry**
--230
+![Screenshot (230)](https://user-images.githubusercontent.com/80479635/153556263-bb8aa172-c08d-48a6-a358-c17316f3954a.png)
+
 
 
 # 8. find all movies that are not produced in 2000 or they do not have budget of 10000.
@@ -304,7 +310,8 @@ movies
   .....
   .....
 **Below Picture for above querry**
--231
+![Screenshot (231)](https://user-images.githubusercontent.com/80479635/153556285-e873f316-7a75-4d8e-93ba-408414fae644.png)
+
 
 
 # 9. find all movies that were produced from 2000 to 2010.
@@ -347,7 +354,8 @@ movies
   .....
   .....
 **Below Picture for above querry**
--232
+![Screenshot (232)](https://user-images.githubusercontent.com/80479635/153556311-7c3802b2-4f40-45d0-9bd5-252abc4e83bd.png)
+
 
 
 # 10. Sort all movies descending based on the production year and if the year is same then alphabetically for their movie_names.
@@ -386,9 +394,9 @@ movies
   .....
   .....
 **Below Picture for above querry**
--233
--234
--235
+![Screenshot (233)](https://user-images.githubusercontent.com/80479635/153556339-0b8e33ba-59d8-4293-84de-86e50475a281.png)
+![Screenshot (234)](https://user-images.githubusercontent.com/80479635/153556345-6fc6fc27-96e3-493d-8b8a-5c86cd865538.png)
+![Screenshot (235)](https://user-images.githubusercontent.com/80479635/153556361-1f2beecd-d185-4b33-84b3-79d00070c801.png)
 
 
 # 11. in query 10 skip the first 10 entries and fetch the next 5.
@@ -440,7 +448,8 @@ movies
 ]
 
 **Below Picture for above querry**
--237
+![Screenshot (237)](https://user-images.githubusercontent.com/80479635/153556389-fdeab06d-43ed-4e88-b44c-c14fe1ea9087.png)
+
 
 
 # 12. remove movie genre from the first 10 movies in query 10.
@@ -452,8 +461,8 @@ DeprecationWarning: Collection.remove() is deprecated. Use deleteOne, deleteMany
 { acknowledged: true, deletedCount: 9 }
 
 **Below Picture for above querry**
--238
+![Screenshot (238)](https://user-images.githubusercontent.com/80479635/153556415-bc3defe5-9552-4b05-acc9-73c231afe20b.png)
 
 
 # Final Picture of almost all querries of above.
--239
+![Screenshot (239)](https://user-images.githubusercontent.com/80479635/153556444-92a30bc2-12e8-49fd-a0b2-a99deae845af.png)
