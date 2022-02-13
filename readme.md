@@ -1,11 +1,17 @@
 
-# mongoimport --db movies --collection movies --file movies.json --port 27017 --jsonArray
+# MongoDB Queries for Movies Application
+
+```js
+mongoimport --db movies --collection movies --file movies.json --port 27017 --jsonArray
+```
 **Output-**
 2022-02-11T11:48:07.143+0530    connected to: mongodb://localhost:27017/
 2022-02-11T11:48:07.151+0530    Failed: cannot decode array into a primitive.D
 2022-02-11T11:48:07.151+0530    0 document(s) imported successfully. 0 document(s) failed to import.
 
-# show dbs
+```js
+ show dbs
+ ```
 admin     41 kB
 airbnb  54.7 MB
 config   111 kB
@@ -13,15 +19,17 @@ local   73.7 kB
 masai    274 kB
 movies  65.5 kB
 
-# use movies
+```js
+ use movies
+ ```
 switched to db movies
 movies> show collections
 movies
 
 #  1. Find all movies which are equal to movie_name.
-
-- db.movies.find({movie_name: "Bitter Sweetheart"})
-
+```js
+db.movies.find({movie_name: "Bitter Sweetheart"})
+```
 **Output-**
 [
   {
@@ -34,8 +42,9 @@ movies
   }
 ]
 
-- db.movies.find({movie_name: {$eq:"Bitter Sweetheart"}})
-
+```js
+db.movies.find({movie_name: {$eq:"Bitter Sweetheart"}})
+```
 [
   {
     _id: ObjectId("6206015339c97eef66aa8e92"),
@@ -53,13 +62,13 @@ movies
 
 
 # 2. find all movies which are not equal to movie_name.
-
-- db.movies.find({movie_name: {$ne:"Bitter Sweetheart"}}).count()
-
+```js
+db.movies.find({movie_name: {$ne:"Bitter Sweetheart"}}).count()
+```
 **Output-** 499
-
-- db.movies.find({movie_name: {$ne:"Bitter Sweetheart"}})
-
+```js
+db.movies.find({movie_name: {$ne:"Bitter Sweetheart"}})
+```
 **Output-**
 [
   {
@@ -87,13 +96,14 @@ movies
 
 
 # 3. find all movies greater than and greater than equal to a budget
-
-- db.movies.find({'budget ': {$gte: 16150}}).count()
-
+```js
+db.movies.find({'budget ': {$gte: 16150}}).count()
+```
 **Output-** 171
 
--db.movies.find({'budget ': {$gte: 16150}})
-
+```js
+db.movies.find({'budget ': {$gte: 16150}})
+```
 **Output-**
 [
   {
@@ -122,13 +132,14 @@ movies
 
 
 # 4. find all movies less than and less than equal to a budget.
-
--db.movies.find({'budget ': {$lte: 16150}}).count()
-
+```js
+db.movies.find({'budget ': {$lte: 16150}}).count()
+```
 **Output-** 330
 
--db.movies.find({'budget ': {$lte: 16150}})
-
+```js
+db.movies.find({'budget ': {$lte: 16150}})
+```
 **Output-**
 [
   {
@@ -157,13 +168,14 @@ movies
 
 
 # 5. find all movies that are produced after 2000 with budget greater than 10000.
-
-- db.movies.find({'production_year ': {$gt: 2000},'budget ': {$gt: 10000 }}).count()
-
+```js
+db.movies.find({'production_year ': {$gt: 2000},'budget ': {$gt: 10000 }}).count()
+```
 **Output-** 294
 
-- db.movies.find({'production_year ': {$gt: 2000},'budget ': {$gt: 10000 }})
-
+```js
+db.movies.find({'production_year ': {$gt: 2000},'budget ': {$gt: 10000 }})
+```
 **Output-**
 [
   {
@@ -200,13 +212,14 @@ movies
 
 
 # 6. find all movies that are produced after 2000 or budget greater than 10000.
-
-- db.movies.find({$or:[{'production_year ': {$gt: 2000}},{'budget ': {$gt: 10000 }}]}).count()
-
+```js
+db.movies.find({$or:[{'production_year ': {$gt: 2000}},{'budget ': {$gt: 10000 }}]}).count()
+```
 **Output-** 485
 
-- db.movies.find({$or:[{'production_year ': {$gt: 2000}},{'budget ': {$gt: 10000 }}]})
-
+```js
+db.movies.find({$or:[{'production_year ': {$gt: 2000}},{'budget ': {$gt: 10000 }}]})
+```
 **Output-**
 [
   {
@@ -235,13 +248,14 @@ movies
 
 
 # 7. find all movies that are neither produced after 2000 nor with budget greater than 10000.
-
-- db.movies.find({$nor:[{'production_year ': {$gt: 2000}},{'budget ': {$gt: 10000 }}]}).count()
-
+```js
+db.movies.find({$nor:[{'production_year ': {$gt: 2000}},{'budget ': {$gt: 10000 }}]}).count()
+```
 **Output-** 15
 
-- db.movies.find({$nor:[{'production_year ': {$gt: 2000}},{'budget ': {$gt: 10000 }}]})
-
+```js
+db.movies.find({$nor:[{'production_year ': {$gt: 2000}},{'budget ': {$gt: 10000 }}]})
+```
 **Output-**
 [
   {
@@ -279,13 +293,14 @@ movies
 
 
 # 8. find all movies that are not produced in 2000 or they do not have budget of 10000.
-
-- db.movies.find({$or:[{'production_year ': {$ne: 2000}},{'budget ': {$ne: 10000 }}]}).count()
-
+```js
+db.movies.find({$or:[{'production_year ': {$ne: 2000}},{'budget ': {$ne: 10000 }}]}).count()
+```
 **Output-** 500
 
-- db.movies.find({$or:[{'production_year ': {$ne: 2000}},{'budget ': {$ne: 10000 }}]})
-
+```js
+db.movies.find({$or:[{'production_year ': {$ne: 2000}},{'budget ': {$ne: 10000 }}]})
+```
 **Output-**
 [
   {
@@ -315,13 +330,14 @@ movies
 
 
 # 9. find all movies that were produced from 2000 to 2010.
-
-- db.movies.find({'production_year ': {$gte: 2000, $lte: 2010 }}).count()
-
+```js
+db.movies.find({'production_year ': {$gte: 2000, $lte: 2010 }}).count()
+```
 **Output-** 168
 
-- db.movies.find({'production_year ': {$gte: 2000, $lte: 2010 }})
-
+```js
+db.movies.find({'production_year ': {$gte: 2000, $lte: 2010 }})
+```
 **Output-** 
 [
   {
@@ -359,9 +375,9 @@ movies
 
 
 # 10. Sort all movies descending based on the production year and if the year is same then alphabetically for their movie_names.
-
-- db.movies.find({}).sort({'production_year ': -1,movie_name: 1})
-
+```js
+db.movies.find({}).sort({'production_year ': -1,movie_name: 1})
+```
 **Output-**
 [
   {
@@ -400,9 +416,9 @@ movies
 
 
 # 11. in query 10 skip the first 10 entries and fetch the next 5.
-
--db.movies.find({}).limit(5).skip(10)
-
+```js
+db.movies.find({}).limit(5).skip(10)
+```
 **Output-**
 [
   {
@@ -453,9 +469,9 @@ movies
 
 
 # 12. remove movie genre from the first 10 movies in query 10.
-
-- db.movies.remove({id: {$lte: 10}},{movie_genre: 1})
-
+```js
+db.movies.remove({id: {$lte: 10}},{movie_genre: 1})
+```
 **Output-**
 DeprecationWarning: Collection.remove() is deprecated. Use deleteOne, deleteMany, findOneAndDelete, or bulkWrite.
 { acknowledged: true, deletedCount: 9 }
